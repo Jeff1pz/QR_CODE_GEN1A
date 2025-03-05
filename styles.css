@@ -1,0 +1,353 @@
+/* ✨ Ultimate Gen Z Aesthetic Style ✨ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* 🌗 Light and Dark Mode Variables */
+:root {
+    background-image: -moz-radial-gradient(#e7d8d9, #fad0c4, #fbc2eb);
+    --text-light: #000000;
+    --container-light: rgba(255, 255, 255, 0.2);
+    --button-light: linear-gradient(135deg, #ff512f, #dd2476);
+    --bg-dark: #121212;
+    --text-dark: #ffffff;
+    --container-dark: rgba(255, 255, 255, 0.1);
+    --button-dark: linear-gradient(135deg, #4A00E0, #8E2DE2);
+}
+
+/* 🌞 Light Mode (Default) */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    text-align: center;
+    margin: 50px;
+    overflow-x: hidden;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.container {
+    background: var(--container-light);
+    color: var(--text-light);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode .container {
+    background: var(--container-dark);
+    color: var(--text-dark);
+}
+
+/* 🎨 Stylish Buttons */
+button {
+    padding: 12px 20px;
+    background: var(--button-light);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 81, 47, 0.3);
+}
+
+button:hover {
+    background: var(--button-dark);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(142, 45, 226, 0.4);
+}
+
+body.dark-mode button {
+    background: var(--button-dark);
+}
+
+/* 🔄 Dark Mode Toggle */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: var(--button-light);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+body.dark-mode #darkModeToggle {
+    background: var(--button-dark);
+}
+
+/* 🎭 Text Color Adaptation */
+a, p, h1, h2, h3, h4, h5, h6, label, span {
+    color: var(--text-light);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode a,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode label,
+body.dark-mode span {
+    color: var(--text-dark);
+}
+
+/* 🌈 Expiry Dropdown */
+#expirySelect {
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid var(--expiry-border);
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: var(--expiry-bg);
+    color: var(--text-light);
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode {
+    --expiry-bg: rgba(255, 255, 255, 0.1);
+    --expiry-border: #8E2DE2;
+}
+
+:root {
+    --expiry-bg: rgba(255, 255, 255, 0.3);
+    --expiry-border: #ff512f;
+}
+
+
+body.dark-mode #expirySelect {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-dark);
+    border-color: #8E2DE2;
+}
+
+/* 📸 QR Code */
+#qrCodeImage {
+    width: 150px;
+    margin-top: 10px;
+}
+
+/* 🔗 Links */
+a {
+    color: #ff512f;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #8E2DE2;
+}
+
+body.dark-mode a {
+    color: #8E2DE2;
+}
+
+/* ⏳ Countdown Timer - Dynamic Colors */
+:root {
+    --countdown-green: #008000; /* Green */
+    --countdown-yellow: #c8a600; /* Yellow */
+    --countdown-orange: #d97706; /* Orange */
+    --countdown-red: #e63946; /* Red */
+    --countdown-gray: gray; /* Expired */
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode {
+    --countdown-green: #00ff88;
+    --countdown-yellow: #ffdd44;
+    --countdown-orange: #ff9900;
+    --countdown-red: #ff4444;
+    --countdown-gray: #aaaaaa;
+}
+
+/* Apply the countdown text style */
+.countdown-text {
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+
+/* 🗑 Delete Button */
+.delete-btn {
+    padding: 8px 15px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(230, 57, 70, 0.3);
+}
+
+.delete-btn:hover {
+    background-color: #ff1e40;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 30, 64, 0.4);
+}
+
+body.dark-mode .delete-btn {
+    background-color: #ff1e40;
+}
+
+/* 🎭 Delete Confirmation Popup */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+.popup {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+    width: 320px;
+    position: relative;
+    z-index: 10000;
+}
+
+body.dark-mode .popup {
+    background: rgba(20, 20, 20, 0.95);
+}
+
+/* ✨ Smooth Fade-in Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+/* Style for the tutorial button */
+#tutorialButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background: var(--button-light);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#tutorialButton:hover {
+    background: var(--button-dark);
+    transform: scale(1.1);
+}
+
+/* Back button for tutorial page */
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #0056b3;
+}
+
+/* Tutorial page formatting */
+.tutorial-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.tutorial-content section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* 🌱 Footer Styling */
+.footer {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer h2, .footer h3 {
+    color: #ffb703;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #dddddd;
+}
+
+/* Adjust footer for dark mode */
+body.dark-mode .footer {
+    background: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .footer p {
+    color: #bbbbbb;
+}

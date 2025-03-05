@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code File Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <button id="tutorialButton" onclick="location.href='tutorial.html'">📖 Tutorial</button>
+
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+
+    <div class="container">
+        <h2>Upload Files & Get QR Codes</h2>
+        <form id="uploadForm">
+            <input type="file" id="fileInput" multiple required>
+            <label for="expirySelect">Choose Expiry:</label>
+            <select id="expirySelect">
+                <option value="3600">1 Hour</option>
+                <option value="86400" selected>1 Day</option>
+                <option value="604800">7 Days</option>
+                <option value="2592000">30 Days (1 Month)</option>
+            </select>            
+            
+            <button type="submit">Generate</button>
+
+
+            <!-- 🌟 Delete Confirmation Popup -->
+<div id="deletePopup" class="popup-container">
+    <div class="popup">
+        <h3>Are you sure?</h3>
+        <p>This file will be permanently deleted.</p>
+        <div class="popup-buttons">
+            <button id="confirmDelete" class="delete-btn">Delete</button>
+            <button id="cancelDelete" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+
+        </form>
+
+        <!-- Loading Animation -->
+        <div id="loadingContainer" style="display: none;">
+            <div class="cloud"></div>
+            <p>Uploading...</p>
+        </div>
+
+        <div id="filesContainer"></div>
+    </div>
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
